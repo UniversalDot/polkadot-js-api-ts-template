@@ -11,7 +11,7 @@ const optionsPromise = yargs(hideBin(process.argv))
 	.option('endpoint', {
 		alias: 'e',
 		type: 'string',
-		default: "wss://rpc.polkadot.io",
+		default: "ws://109.235.70.27:9944",
 		description: 'the wss endpoint. It must allow unsafe RPCs.',
 		required: true,
 	})
