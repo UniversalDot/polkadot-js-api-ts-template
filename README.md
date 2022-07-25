@@ -1,6 +1,43 @@
 # polkadot-js-api-ts-template
 
-My personal, beloved template to quickly start hacking in top of any substrate based chain with
+Beloved template to quickly start hacking in top of any substrate based chain with
 `@polkadot/api`.
 
 See [`package.json`](./package.json) to see what's up 🔥🔥.
+
+
+## Install 
+
+First install [ts-node](https://www.npmjs.com/package/ts-node)
+
+```
+npm i ts-node
+```
+then install all npm packages
+
+```
+npm install
+```
+Optionally, in order to verify that you can connect with our node, run:
+
+## Run
+
+To run **console** in interactive mode, run:
+
+```
+npx ts-node -i
+```
+Then, we import api dependencies and connect with our node by running:
+```
+import { ApiPromise, WsProvider } from "@polkadot/api";
+const provider = new WsProvider("ws://109.235.70.27:9944");
+const api = await ApiPromise.create({ provider });
+```
+
+After this, we are able to interact with the API via api variable.
+
+Example api calls:
+
+```
+(await api.query.task.tasksOwned('5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY')).toJSON()
+```
