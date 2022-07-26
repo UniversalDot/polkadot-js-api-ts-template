@@ -39,5 +39,16 @@ After this, we are able to interact with the API via api variable.
 Example api calls:
 
 ```
+(await api.query.profile.profileCount()).toJSON()
+```
+Returns the number of profiles.
+
+```
 (await api.query.task.tasksOwned('5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY')).toJSON()
 ```
+Returns the tasks owner by a specified address.
+
+```
+ (await api.query.task.tasks.entries()).toString()
+```
+Returns all entries of Tasks
