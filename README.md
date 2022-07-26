@@ -20,6 +20,10 @@ npm install
 ```
 Optionally, in order to verify that you can connect with our node, run:
 
+````
+npm run dev
+````
+
 ## Run
 
 To run **console** in interactive mode, run:
